@@ -6,6 +6,8 @@ import Theme from "../Styles/Theme";
 import Router from "./Router.js";
 import { useQuery } from "react-apollo-hooks";
 import Footer from "./Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const QUERY = gql`
   {
@@ -28,6 +30,7 @@ export default () => {
         <GolobalStyles />
         <Router isLoggedIn={isLoggedIn} />
         <Footer />
+        <ToastContainer position={toast.POSITION.BOTTOM_LEFT} />
       </Wrapper>
     </ThemeProvider>
   );
