@@ -47,11 +47,9 @@ const ListItems = [
 export default () => (
   <Footer>
     <List>
-      {ListItems.map((item, key) => (
-        <ListItem>
-          <Link key={key} href={item.url}>
-            {item.name}
-          </Link>
+      {ListItems.map((item) => (
+        <ListItem key={item.id}>
+          <Link href={item.url}>{item.name}</Link>
         </ListItem>
       ))}
     </List>
